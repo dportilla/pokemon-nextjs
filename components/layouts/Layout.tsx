@@ -1,5 +1,4 @@
 import React, { PropsWithChildren } from "react";
-import { FC } from "react";
 import Head from "next/head";
 import Navbar from "../ui/Navbar";
 
