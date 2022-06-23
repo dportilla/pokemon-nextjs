@@ -11,10 +11,10 @@ interface Props {
 
 const HomePage: NextPage<Props> = ({ pokemons }) => {
 
-  console.log(pokemons)
+
 
   return (
-    <Layout title="Pokemon List Pokedex">
+    <Layout title="Home - Pokedex">
       <Grid.Container gap={2} justify='flex-start'>
         {
           pokemons.map((pokemon) => (

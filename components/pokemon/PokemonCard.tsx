@@ -10,7 +10,7 @@ interface Props {
 const PokemonCard: FC<Props> = ({ pokemon }) => {
   const router = useRouter();
 
-  const onClick = () => {
+  const onPressPoke = () => {
     router.push(`/pokemon/${pokemon.id}`);
   };
 
@@ -18,7 +18,7 @@ const PokemonCard: FC<Props> = ({ pokemon }) => {
 
   return (
     <Grid xs={6} sm={3} md={3} xl={3} key={id}>
-      <Card isHoverable variant="bordered" isPressable onClick={onClick}>
+      <Card isHoverable variant="bordered" isPressable onPress={onPressPoke}>
         <Card.Body css={{ p: 1 }}>
           <Card.Image src={img} width="100%" height={140} />
         </Card.Body>
