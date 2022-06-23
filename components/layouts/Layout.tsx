@@ -7,6 +7,8 @@ type Props = {
     children?: React.ReactNode | undefined
 };
 
+const origin = (typeof window === 'undefined') ? '' : window.location.origin;
+
 export const Layout:React.FC<PropsWithChildren<Props>> = ({ children, title }) => {
   return (
     <>
@@ -15,6 +17,10 @@ export const Layout:React.FC<PropsWithChildren<Props>> = ({ children, title }) =
         <meta name="author" content="David Portilla" />
         <meta name="description" content={ `Information about pokemon ${ title }` }/>
         <meta name="keywords" content={ `${ title } pokemon, pokedex` } />
+
+        <meta name="og:title" content={ `Information about pokemon ${ title }` }/>
+        <meta name="og:description" content={ `Information about pokemon ${ title }` }/>
+        <meta name="og:image" content={ `${ origin }/pikachuu.jpg` } />
       </Head>
 
       <Navbar />

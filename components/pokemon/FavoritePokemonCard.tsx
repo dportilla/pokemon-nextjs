@@ -14,8 +14,8 @@ const FavoritePokemonCard: FC<Props> = ({ pokemonId }) => {
   };
 
   return (
-    <Grid xs={6} sm={3} md={2} xl={1} key={pokemonId} onClick={onFavorite}>
-      <Card isHoverable isPressable css={{ padding: 10 }}>
+    <Grid xs={6} sm={3} md={2} xl={1} key={pokemonId} >
+      <Card isHoverable isPressable css={{ padding: 10 }} onPress={onFavorite}>
         <Card.Image
           src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonId}.svg`}
           width={"100%"}

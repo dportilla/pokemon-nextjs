@@ -11,7 +11,7 @@ const PokemonCard: FC<Props> = ({ pokemon }) => {
   const router = useRouter();
 
   const onPressPoke = () => {
-    router.push(`/pokemon/${pokemon.id}`);
+    router.push(`/name/${pokemon.name}`);
   };
 
   const { id, name, img } = pokemon;
